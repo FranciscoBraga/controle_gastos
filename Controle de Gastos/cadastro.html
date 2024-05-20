@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Gastos</title>
+    <link rel="stylesheet" href="recursos/css/style.css">
+    <script src="recursos/js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="" alt="logo"></a>
+            <ul>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="consulta.html">Consulta</a></li>
+                <link rel="stylesheet" href="recursos/css/style.css">
+            </ul>
+        </nav>
+    </header>
+    <section id="novas_despesas">
+         <h1>Registro de Novas despesas</h1>
+         <input type="date" name="data" id="data" class="registro">
+         <select name="tipo_gasto" id="tipo_gasto" class="registro">
+            <option value="">Selecione uma opção</option>
+            <option value="1">Energia Elétrica</option>
+            <option value="2">Transporte</option>
+            <option value="3">Educação</option>
+         </select>
+          <textarea name="descricao" id="descricao" placeholder="Digite a descrição da despesa" class="registro"></textarea>
+         <input type="text" name="valor" id="valor" placeholder="Digite o valor da despesa" class="registro">
+         <button type="submit" onclick="novasDespesas()">+</button>
+    </section>
+    
+</body>
+</html>
