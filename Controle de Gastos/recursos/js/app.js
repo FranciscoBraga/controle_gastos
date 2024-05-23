@@ -49,6 +49,11 @@ function novasDespesas(){
         let tipo_gastos =  document.getElementById('tipo_gasto')
         let descricao = document.getElementById('descricao')
         let valor =   document.getElementById('valor')
+        let fade = document.querySelector('#fade')
+        let modal = document.querySelector('#modal')
+        let cabecalho = document.querySelector('#cabecalho_modal')
+        let  aviso = document.querySelector('#aviso')
+        let button = document.getElementById('button')
 
         let despesas = new Despesa(data.value,
                                  tipo_gastos.value,
@@ -56,16 +61,37 @@ function novasDespesas(){
                                 valor.value)
 
 
-        if(despesas.dadosValidos()){
+        if(despesas.dadosValidos()){        
+            fade.classList.toggle('hide')
+            modal.classList.toggle('hide')
+            cabecalho.textContent = "Dados Salvos"
+            cabecalho.style.color = '#0a19e9'
+            aviso.textContent = "Dados Salvos com Sucesso"
+            button.textContent = "Fechar"
             console.log("dados validos")
            // bd.gravar(despesas)
         }else{
+            fade.classList.toggle('hide')
+            modal.classList.toggle('hide')
+            cabecalho.textContent = "Campos vazios"
+            cabecalho.style.color = '#c74929'
+            aviso.textContent = "Existem campos que não foram preenchidos, por favor preenche-los e enviar novamente."
+            button.textContent = "Fechar e Corrigir"
             console.log("dados invalidos")
         }
+}
+
+ function fecharModal(){
+    let modal = document.querySelector('#modal')
+    let cabecalho = document.querySelector('#cabecalho_modal')
+    fade.classList.toggle('hide')
+    modal.classList.toggle('hide')
+
+ }
 
        
 
-}
+
 
 
 

@@ -31,6 +31,16 @@
          <input type="text" name="valor" id="valor" placeholder="Digite o valor da despesa" class="registro">
          <button type="submit" onclick="novasDespesas()">+</button>
     </section>
+
+    <!-----------Modal------------->
+    <div id="fade" class="hide">
+        <div id="modal" class="hide">
+            <h1 id="cabecalho_modal"></h1>
+            <hr>
+            <p id="aviso"></p>
+            <button onclick="fecharModal()" id="button"></button>
+        </div>
+    </div>
     
 </body>
 </html>
