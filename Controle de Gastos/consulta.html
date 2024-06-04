@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Gastos</title>
     <link rel="stylesheet" href="recursos/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="recursos/js/app.js" defer></script>
 </head>
-<body>
+<body onload="carregarListaDespesas()">
     <header>
         <nav>
             <a href="index.html"><img src="" alt="logo"></a>
@@ -18,16 +20,30 @@
     </header>
     <section id="consultas">
          <h1>Consultas</h1>
-         <input type="date" name="date" id="date">
-         <select name="tipo_gasto" id="tipo_gasto">
+         <input type="date" name="date" id="data" class="registro">
+         <select name="tipo_gasto" id="tipo_gasto" class="registro">
             <option value="">Selecione uma opção</option>
             <option value="1">Energia Elétrica</option>
             <option value="2">Transporte</option>
             <option value="3">Educação</option>
          </select>
-         <input type="text" name="descrição" id="descricao" placeholder="Digite a descrição da despesa">
-         <input type="text" name="valor" id="valor" placeholder="Digite o valor da despesa">
-         <button type="submit">+</button>
+         <input type="text" name="valor" id="valor" placeholder="Digite o valor da despesa" class="registro">
+         <button type="submit" onclick="pesquisarDespesas()">Buscar</button>
+    </section>
+
+    <section id="consulta_tabela">
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody id="lista_despesas">
+            </tbody>
+        </table>
     </section>
     
 </body>

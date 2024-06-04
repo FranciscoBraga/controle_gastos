@@ -61,7 +61,7 @@ header nav ul li a{
 }
 
 
-#novas_despesas{
+#novas_despesas,#consultas,#consulta_tabela{
     width: 60%;
     margin: 0 auto;
 
@@ -76,7 +76,7 @@ header nav ul li a{
    
 }
 
-#novas_despesas .registro{
+#novas_despesas .registro,#consultas .registro{
     display: block;
     margin: 10px;
     padding: 5px;
@@ -88,13 +88,53 @@ header nav ul li a{
     height: 100px;
 }
 
-#novas_despesas button{
+#novas_despesas button,#consultas button{
     padding: 15px;
     margin-left: 10px;
     border-radius: 5px;
     width: 156px;
     height: 56px;
     background-color: orange;
+}
+
+#consulta_tabela {
+    margin-top: 25px;
+    margin-left: 200px;
+    border: 2px solid #c3c3c3;
+    border-radius: 5px;
+}
+
+#consulta_tabela table  {
+    padding: 5px;
+    width: 100%;
+    box-shadow: 5px 5px #c4c4c4;
+    border-radius: 5px; 
+}
+
+#consulta_tabela table  th {
+    margin-left: 25px;
+    color: orange;
+}
+
+#consulta_tabela thead {
+    border-bottom : 5px solid red;
+
+}
+
+#consulta_tabela table tbody tr  td{
+    padding: 5px;
+    text-align: center;
+    border-bottom : 1px solid #b4b4b4;
+}
+
+
+.excluir{
+    background-color: #c74929;
+    width: 35px;
+    height: 35px;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 1px 2px #7a2d19;
 }
 
 /*--------------Modal----------------*/
@@ -127,7 +167,7 @@ header nav ul li a{
 #fade #modal{
     opacity: 1;
     pointer-events: all;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 #modal h1{
     position: relative;
